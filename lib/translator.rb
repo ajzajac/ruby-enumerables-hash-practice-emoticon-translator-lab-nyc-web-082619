@@ -41,7 +41,9 @@ end
 def get_english_meaning
   load_library.each do |key, val|
     if jap_emoji == val[1]
-      return val[0]
+     val[0]
+   else
+     "Sorry, that emoticon was not found"
     end
   end
 end
