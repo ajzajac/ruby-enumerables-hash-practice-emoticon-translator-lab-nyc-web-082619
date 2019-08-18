@@ -2,7 +2,6 @@
 require 'yaml'
 
 def load_library(file)
-  return YAML.load_file(file)
   library = YAML.load_file(file)
   new_hash = {"get_meaning" =>{}, "get_emoticon" =>{}}
   library.each do |key, value|
@@ -32,8 +31,10 @@ end
 
 def get_japanese_emoticon(file, emoticon)
  library = load_library(file)
- if library["get_emoticon"].include?(emoticon)
-   library["get_emoticon"]
+  if library["get_emoticon"].include?(emoticon)
+     library["get_emoticon"][emoticon]
+ else
+   
  
 end
 
