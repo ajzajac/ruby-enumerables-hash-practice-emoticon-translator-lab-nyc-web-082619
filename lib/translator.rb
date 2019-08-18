@@ -32,7 +32,7 @@ end
 
 def get_japanese_emoticon(file, emoticon)
  library = load_library(file)
- library.include?(emoticon)
+ if library.include?(emoticon)
  
 end
 
