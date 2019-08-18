@@ -31,11 +31,9 @@ end
   
 
 def get_japanese_emoticon(file, emoticon)
-  load_library.each do |key, value|
-    if eng_emoji == value[0]
-      return value[1]
-    end
-  end
+ library = load_library(file)
+ library.include?(emoticon)
+ 
 end
 
 def get_english_meaning
