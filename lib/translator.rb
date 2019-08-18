@@ -13,21 +13,21 @@ def load_library(file)
 end
 
 
-def get_japanese_emoticon(eng_emoji)
-  load_library.each do |key, value|
-    if eng_emoji == value[0]
-      return value[1]
-    end
-  end
-end
+# def get_japanese_emoticon(eng_emoji)
+#   load_library.each do |key, value|
+#     if eng_emoji == value[0]
+#       return value[1]
+#     end
+#   end
+# end
 
-def get_english_emoji(jap_emoji)
-  load_library.each do |key, val|
-    if jap_emoji == val[1]
-      return val[0]
-    end
-  end
-end
+# def get_english_emoji(jap_emoji)
+#   load_library.each do |key, val|
+#     if jap_emoji == val[1]
+#       return val[0]
+#     end
+#   end
+# end
   
 
 def get_japanese_emoticon(file, emoticon)
@@ -36,10 +36,12 @@ def get_japanese_emoticon(file, emoticon)
       return value[1]
     end
   end
-  
 end
 
 def get_english_meaning
-  # code goes here
-  
+  load_library.each do |key, val|
+    if jap_emoji == val[1]
+      return val[0]
+    end
+  end
 end
