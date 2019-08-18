@@ -34,7 +34,7 @@ def get_japanese_emoticon(file, emoticon)
   if library["get_emoticon"].include?(emoticon)
      library["get_emoticon"][emoticon]
  else
-   
+   "Sorry that emoticon was not found"
  
 end
 
