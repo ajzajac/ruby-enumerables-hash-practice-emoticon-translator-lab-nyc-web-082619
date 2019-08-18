@@ -38,8 +38,8 @@ def get_japanese_emoticon(file, emoticon)
   end
 end
 
-def get_english_meaning
-  load_library.each do |key, val|
+def get_english_meaning(file, emoticon)
+  load_library(file).each do |key, val|
     if jap_emoji == val[1]
      val[0]
    else
